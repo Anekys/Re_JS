@@ -57,8 +57,8 @@ def font2png(fontPath):     #将字体文件转换为图片,参数为字体文�
     return img_byte.getvalue(),glyphnames
 
 def ocr(image):     #利用百度OCR的API识别图片中的文字,参数为图片字节流,返回识别到的文字列表,每个元素为一个字
-    apikey="wiPp17RqG7LNPiZoU5d9AgRx"
-    secretkey="449Ie4au6zipvpXsanT4bNCnFcI1GAEc"
+    apikey="你的APIkey"
+    secretkey="你的SecretKey"
     host = f'https://aip.baidubce.com/oauth/2.0/token?grant_type=client_credentials&client_id={apikey}&client_secret={secretkey}'
     try:
         token=requests.get(host).json()['access_token']
